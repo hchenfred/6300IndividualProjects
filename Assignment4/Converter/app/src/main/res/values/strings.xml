@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name">Converter</string>
+    <string-array name="convertFrom_arrays">
+        <item>Mile</item>
+        <item>Feet</item>
+        <item>Inch</item>
+        <item>Km</item>
+        <item>Meter</item>
+        <item>Cm</item>
+    </string-array>
+    <string-array name="convertTo_arrays">
+        <item>Mile</item>
+        <item>Feet</item>
+        <item>Inch</item>
+        <item>Km</item>
+        <item>Meter</item>
+        <item>Cm</item>
+    </string-array>
+</resources>

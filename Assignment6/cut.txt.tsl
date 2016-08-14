@@ -1,0 +1,367 @@
+
+Test Case 1  		<error>  (follows [if])
+   Field Value :  index = 0
+
+
+Test Case 2  		<single>  (follows [if])
+   Field Value :  index = 1
+
+
+Test Case 3  		<single>  (follows [if])
+   Field Value :  index = maxInt
+
+
+Test Case 4  		<error>  (follows [if])
+   Field Value :  index = -1
+
+
+Test Case 5  		<single>  (follows [if])
+   Field Value :  a range between 1 and the size of one line
+
+
+Test Case 6  		<error>  (follows [if])
+   Field Value :  a range between -1 and 1
+
+
+Test Case 7  		<error>  (follows [if])
+   Field Value :  a range between (sizeOfLine)/2 and (sizeOfLine)*2
+
+
+Test Case 8  		<error>  (follows [if])
+   Field Value :  use space between index and range
+
+
+Test Case 9  		<error>  (follows [if])
+   Field Value :  use ; between index and range
+
+
+Test Case 10 		<single>  (follows [if])
+   Field Value :  index followed by range
+
+
+Test Case 11 		<single>  (follows [if])
+   Field Value :  range followed by index
+
+
+Test Case 12 		<error>  (follows [if])
+   Delimiter Length :  multiple characters
+
+
+Test Case 13 		<single>  (follows [if])
+   Delimiter Value :  a quote
+
+
+Test Case 14 		<single>  (follows [if])
+   Delimiter Value :  a tab
+
+
+Test Case 15 		<error>  (follows [if])
+   Delimiter Value :  an space(when field is empty)
+
+
+Test Case 16 		<error>  (follows [if])
+   List Value :  index = 0
+
+
+Test Case 17 		<single>  (follows [if])
+   List Value :  index = 1
+
+
+Test Case 18 		<single>  (follows [if])
+   List Value :  index = maxInt
+
+
+Test Case 19 		<error>  (follows [if])
+   List Value :  index = -1
+
+
+Test Case 20 		<single>  (follows [if])
+   List Value :  a range between 1 and the number of characters one line
+
+
+Test Case 21 		<error>  (follows [if])
+   List Value :  a range between -1 and 1
+
+
+Test Case 22 		<error>  (follows [if])
+   List Value :  a range between NoOfCharactersInALine/2 and NoOfCharactersInALine*2
+
+
+Test Case 23 		<error>  (follows [if])
+   List Value :  use space between index and range
+
+
+Test Case 24 		<error>  (follows [if])
+   List Value :  use ; between index and range
+
+
+Test Case 25 		<single>  (follows [if])
+   List Value :  index followed by range
+
+
+Test Case 26 		<single>  (follows [if])
+   List Value :  range followed by index
+
+
+Test Case 27 		<error>
+   File Name Value :  file not exist
+
+
+Test Case 28 		<error>
+   File Name Value :  omitted
+
+
+Test Case 29 		<single>
+   File Name Value :  file name extension is not txt
+
+
+Test Case 30 		<single>
+   File Content :  empty file
+
+
+Test Case 31 		<single>
+   File Content :  does not contain any delimiter
+
+
+Test Case 32 		<single>
+   File Content :  file with only special characters
+
+
+Test Case 33 		<single>
+   File Content :  file with only spaces
+
+
+Test Case 34 		<single>
+   File Content :  file with only alphanumeric characters
+
+
+Test Case 35 		(Key = 1.0.1.0.1.0.2.6.)
+   Field Selection  :  empty
+   Field Value      :  <n/a>
+   Delimiter Length :  zero
+   Delimiter Value  :  <n/a>
+   List Selection   :  empty
+   List Value       :  <n/a>
+   File Name Value  :  good file name
+   File Content     :  file with alphanumeric and special characters
+
+
+Test Case 36 		(Key = 1.0.1.0.2.5.2.6.)
+   Field Selection  :  empty
+   Field Value      :  <n/a>
+   Delimiter Length :  zero
+   Delimiter Value  :  <n/a>
+   List Selection   :  one index
+   List Value       :  index between 1 and the number of characters of the line
+   File Name Value  :  good file name
+   File Content     :  file with alphanumeric and special characters
+
+
+Test Case 37 		(Key = 1.0.1.0.3.8.2.6.)
+   Field Selection  :  empty
+   Field Value      :  <n/a>
+   Delimiter Length :  zero
+   Delimiter Value  :  <n/a>
+   List Selection   :  one range
+   List Value       :  a range between NoOfCharacterInALine/3 and NoOfCharactersInALine/2
+   File Name Value  :  good file name
+   File Content     :  file with alphanumeric and special characters
+
+
+Test Case 38 		(Key = 1.0.1.0.4.12.2.6.)
+   Field Selection  :  empty
+   Field Value      :  <n/a>
+   Delimiter Length :  zero
+   Delimiter Value  :  <n/a>
+   List Selection   :  indexes and range combination
+   List Value       :  indexes followed by ranges followed by indexes
+   File Name Value  :  good file name
+   File Content     :  file with alphanumeric and special characters
+
+
+Test Case 39 		(Key = 1.0.1.0.4.13.2.6.)
+   Field Selection  :  empty
+   Field Value      :  <n/a>
+   Delimiter Length :  zero
+   Delimiter Value  :  <n/a>
+   List Selection   :  indexes and range combination
+   List Value       :  ranges followed by indexes followed by indexes
+   File Name Value  :  good file name
+   File Content     :  file with alphanumeric and special characters
+
+
+Test Case 40 		(Key = 2.5.1.0.1.0.2.6.)
+   Field Selection  :  one index
+   Field Value      :  index between 1 and the size of the line
+   Delimiter Length :  zero
+   Delimiter Value  :  <n/a>
+   List Selection   :  empty
+   List Value       :  <n/a>
+   File Name Value  :  good file name
+   File Content     :  file with alphanumeric and special characters
+
+
+Test Case 41 		(Key = 2.5.2.1.1.0.2.6.)
+   Field Selection  :  one index
+   Field Value      :  index between 1 and the size of the line
+   Delimiter Length :  one character
+   Delimiter Value  :  a space
+   List Selection   :  empty
+   List Value       :  <n/a>
+   File Name Value  :  good file name
+   File Content     :  file with alphanumeric and special characters
+
+
+Test Case 42 		(Key = 2.5.2.4.1.0.2.6.)
+   Field Selection  :  one index
+   Field Value      :  index between 1 and the size of the line
+   Delimiter Length :  one character
+   Delimiter Value  :  an alphanumeric character
+   List Selection   :  empty
+   List Value       :  <n/a>
+   File Name Value  :  good file name
+   File Content     :  file with alphanumeric and special characters
+
+
+Test Case 43 		(Key = 2.5.2.5.1.0.2.6.)
+   Field Selection  :  one index
+   Field Value      :  index between 1 and the size of the line
+   Delimiter Length :  one character
+   Delimiter Value  :  a special character
+   List Selection   :  empty
+   List Value       :  <n/a>
+   File Name Value  :  good file name
+   File Content     :  file with alphanumeric and special characters
+
+
+Test Case 44 		(Key = 3.8.1.0.1.0.2.6.)
+   Field Selection  :  one range
+   Field Value      :  a range between (sizeOfLine)/3 and (sizeOfLine)/2
+   Delimiter Length :  zero
+   Delimiter Value  :  <n/a>
+   List Selection   :  empty
+   List Value       :  <n/a>
+   File Name Value  :  good file name
+   File Content     :  file with alphanumeric and special characters
+
+
+Test Case 45 		(Key = 3.8.2.1.1.0.2.6.)
+   Field Selection  :  one range
+   Field Value      :  a range between (sizeOfLine)/3 and (sizeOfLine)/2
+   Delimiter Length :  one character
+   Delimiter Value  :  a space
+   List Selection   :  empty
+   List Value       :  <n/a>
+   File Name Value  :  good file name
+   File Content     :  file with alphanumeric and special characters
+
+
+Test Case 46 		(Key = 3.8.2.4.1.0.2.6.)
+   Field Selection  :  one range
+   Field Value      :  a range between (sizeOfLine)/3 and (sizeOfLine)/2
+   Delimiter Length :  one character
+   Delimiter Value  :  an alphanumeric character
+   List Selection   :  empty
+   List Value       :  <n/a>
+   File Name Value  :  good file name
+   File Content     :  file with alphanumeric and special characters
+
+
+Test Case 47 		(Key = 3.8.2.5.1.0.2.6.)
+   Field Selection  :  one range
+   Field Value      :  a range between (sizeOfLine)/3 and (sizeOfLine)/2
+   Delimiter Length :  one character
+   Delimiter Value  :  a special character
+   List Selection   :  empty
+   List Value       :  <n/a>
+   File Name Value  :  good file name
+   File Content     :  file with alphanumeric and special characters
+
+
+Test Case 48 		(Key = 4.12.1.0.1.0.2.6.)
+   Field Selection  :  indexes and range combination
+   Field Value      :  indexes followed by ranges followed by indexes
+   Delimiter Length :  zero
+   Delimiter Value  :  <n/a>
+   List Selection   :  empty
+   List Value       :  <n/a>
+   File Name Value  :  good file name
+   File Content     :  file with alphanumeric and special characters
+
+
+Test Case 49 		(Key = 4.12.2.1.1.0.2.6.)
+   Field Selection  :  indexes and range combination
+   Field Value      :  indexes followed by ranges followed by indexes
+   Delimiter Length :  one character
+   Delimiter Value  :  a space
+   List Selection   :  empty
+   List Value       :  <n/a>
+   File Name Value  :  good file name
+   File Content     :  file with alphanumeric and special characters
+
+
+Test Case 50 		(Key = 4.12.2.4.1.0.2.6.)
+   Field Selection  :  indexes and range combination
+   Field Value      :  indexes followed by ranges followed by indexes
+   Delimiter Length :  one character
+   Delimiter Value  :  an alphanumeric character
+   List Selection   :  empty
+   List Value       :  <n/a>
+   File Name Value  :  good file name
+   File Content     :  file with alphanumeric and special characters
+
+
+Test Case 51 		(Key = 4.12.2.5.1.0.2.6.)
+   Field Selection  :  indexes and range combination
+   Field Value      :  indexes followed by ranges followed by indexes
+   Delimiter Length :  one character
+   Delimiter Value  :  a special character
+   List Selection   :  empty
+   List Value       :  <n/a>
+   File Name Value  :  good file name
+   File Content     :  file with alphanumeric and special characters
+
+
+Test Case 52 		(Key = 4.13.1.0.1.0.2.6.)
+   Field Selection  :  indexes and range combination
+   Field Value      :  ranges followed by indexes followed by indexes
+   Delimiter Length :  zero
+   Delimiter Value  :  <n/a>
+   List Selection   :  empty
+   List Value       :  <n/a>
+   File Name Value  :  good file name
+   File Content     :  file with alphanumeric and special characters
+
+
+Test Case 53 		(Key = 4.13.2.1.1.0.2.6.)
+   Field Selection  :  indexes and range combination
+   Field Value      :  ranges followed by indexes followed by indexes
+   Delimiter Length :  one character
+   Delimiter Value  :  a space
+   List Selection   :  empty
+   List Value       :  <n/a>
+   File Name Value  :  good file name
+   File Content     :  file with alphanumeric and special characters
+
+
+Test Case 54 		(Key = 4.13.2.4.1.0.2.6.)
+   Field Selection  :  indexes and range combination
+   Field Value      :  ranges followed by indexes followed by indexes
+   Delimiter Length :  one character
+   Delimiter Value  :  an alphanumeric character
+   List Selection   :  empty
+   List Value       :  <n/a>
+   File Name Value  :  good file name
+   File Content     :  file with alphanumeric and special characters
+
+
+Test Case 55 		(Key = 4.13.2.5.1.0.2.6.)
+   Field Selection  :  indexes and range combination
+   Field Value      :  ranges followed by indexes followed by indexes
+   Delimiter Length :  one character
+   Delimiter Value  :  a special character
+   List Selection   :  empty
+   List Value       :  <n/a>
+   File Name Value  :  good file name
+   File Content     :  file with alphanumeric and special characters
+

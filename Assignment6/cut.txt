@@ -1,0 +1,84 @@
+Fields:
+  Field Selection:
+    empty.                         [property FieldsEmpty]
+    one index.                     [property FieldWithOneIndex]
+    one range.                     [property FieldWithOneRange]
+    indexes and range combination. [property FieldWithIndexAndRange]                                              
+    
+  Field Value:
+    index = 0.                                         [if FieldWithOneIndex][error]
+    index = 1.                                         [if FieldWithOneIndex][single]
+    index = maxInt.                                    [if FieldWithOneIndex][single]
+    index = -1.                                        [if FieldWithOneIndex][error]
+    index between 1 and the size of the line.          [if FieldWithOneIndex]
+    a range between 1 and the size of one line.        [if FieldWithOneRange][single]
+    a range between -1 and 1.                          [if FieldWithOneRange][error]
+    a range between (sizeOfLine)/3 and (sizeOfLine)/2. [if FieldWithOneRange] 
+    a range between (sizeOfLine)/2 and (sizeOfLine)*2. [if FieldWithOneRange][single]
+    use space between index and range.                 [if FieldWithIndexAndRange][error]
+    use ; between index and range.                     [if FieldWithIndexAndRange][error]
+    indexes followed by ranges followed by indexes.    [if FieldWithIndexAndRange]
+    ranges followed by indexes followed by indexes.    [if FieldWithIndexAndRange]
+    index followed by range.                           [if FieldWithOneIndex][single]
+    range followed by index.                           [if FieldWithOneIndex][single]
+
+  
+  
+Delimiter: 
+  Delimiter Length: 
+    zero.                           [property DelimiterEmpty]
+    one character.                  [if !FieldsEmpty][property OneDelimiter]
+    multiple characters.            [if !FieldsEmpty][error]
+
+  Delimiter Value:
+    a space.                        [if OneDelimiter]                      
+    a quote.                        [if OneDelimiter][single]
+    a tab.                          [if OneDelimiter][single]
+    an alphanumeric character.      [if OneDelimiter]  
+    a special character.            [if OneDelimiter]  
+    an space(when field is empty).  [if OneDelimiter][error]      
+
+
+List:
+  List Selection:
+    empty.            				[property ListEmpty]
+    one index.        			    [if FieldsEmpty][property ListWithOneIndex]
+    one range.               		[if FieldsEmpty][property ListWithOneRange]
+    indexes and range combination.  [if FieldsEmpty][property ListWithIndexAndRange]
+
+  List Value:
+    index = 0.                                         					[if ListWithOneIndex][error]
+    index = 1.                                         					[if ListWithOneIndex][single]
+    index = maxInt.                                    					[if ListWithOneIndex][single]
+    index = -1.                                        					[if ListWithOneIndex][error]
+    index between 1 and the number of characters of the line.          	[if ListWithOneIndex]
+    a range between 1 and the number of characters one line.        	[if ListWithOneRange][single]
+    a range between -1 and 1.                          					[if ListWithOneRange][error]
+    a range between NoOfCharacterInALine/3 and NoOfCharactersInALine/2. [if ListWithOneRange] 
+    a range between NoOfCharactersInALine/2 and NoOfCharactersInALine*2.[if ListWithOneRange][single]
+    use space between index and range.                 					[if ListWithIndexAndRange][error]
+    use ; between index and range.                 					    [if ListWithIndexAndRange][error]
+    indexes followed by ranges followed by indexes.   					[if ListWithIndexAndRange]
+    ranges followed by indexes followed by indexes.   					[if ListWithIndexAndRange]
+    index followed by range.                          				    [if ListWithOneIndex][single]
+    range followed by index.                           					[if ListWithOneIndex][single]
+
+File:
+  File Name Value:
+    file not exist.			  [error]
+    good file name.                       
+    omitted.				  [error]
+    file name extension is not txt.    [single]
+
+  File Content:
+    empty file.                                          [property FileEmpty][single]                                 
+    does not contain any delimiter.                      [single]
+    file with only special characters.                   [single]
+    file with only spaces.                               [single]
+    file with only alphanumeric characters.         	 [single]
+    file with alphanumeric and special characters. 
+
+	
+  
+
+
